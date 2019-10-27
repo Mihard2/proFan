@@ -1,0 +1,64 @@
+.longrid_list {
+    .longrids {
+        .longrid {
+            &_img {
+                img {
+                    width: 100%;
+                }
+            }
+
+            &_desc {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                h4 {
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    font-family: $font2;
+                    line-height: 28px;
+                    margin-bottom: 15px;
+                    @include mq(sm) {
+                        margin-top: 20px;
+                        font-size: 20px;
+                        left: 24px;
+                    }
+                    @include mq(xs) {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                }
+
+                p {
+                    font-size: 17px;
+                    line-height: 22px;
+                    font-family: $font4;
+                    color: #333;
+                    @include mq(sm) {
+                        font-size: 15px;
+                        line-height: 19px;
+                    }
+                    @include mq(xs) {
+                        font-size: 13px;
+                        line-height: 17px;
+                    }
+                }
+
+                &-tags {
+                    margin-top: 15px; 
+                    a {
+                        font-size: 12px;
+                        font-family: $font2;
+                        @include mq(sm) {
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+
+            .borderBottom {
+                margin: 30px 0;
+            }
+        }
+    }
+}
