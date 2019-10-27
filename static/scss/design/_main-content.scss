@@ -1,0 +1,186 @@
+.main-content {
+    h3 {
+        font-size: 30px;
+        font-family: $font2;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        border-bottom: 4px solid #D3D3D3;
+        padding-bottom: 5px;
+        @include mq(xs) {
+            font-size: 23px;
+        }
+    }
+
+    .articles {
+        @include mq(md) {
+            margin-top: 25px;
+        }
+        &-block {
+            padding: 20px 20px 20px 0;
+            border-bottom: 3px dotted #D3D3D3;
+
+            &:last-child {
+                border: none;
+            }
+
+            &_img {
+                @include mq(sm) {
+                    padding-right: 10px;
+                }
+                @include mq(sm) {
+                    padding-right: 6px;
+                }
+                img {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+            .linkStyle {
+                @include mq(sm) {
+                    padding-left: 10px;
+                }
+                @include mq(xs) {
+                    padding-left: 6px;
+                }
+                h4 {
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-family: $font2;
+                    margin-bottom: 18px;
+                    line-height: 24px;
+                    color: $bgBlock;
+                    @include mq(xs) {
+                        font-size: 15px;
+                        line-height: 20px;
+                        margin-bottom: 10px;
+                    }
+                }
+    
+                p {
+                    font-family: $font4;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: $bgBlock;
+                    @include mq(sm) {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .audio {
+        @include mq(md) {
+            margin-top: 25px;
+        }
+        &-block {
+            padding: 20px 0 10px;
+            border-bottom: 3px dotted #D3D3D3;
+            @include mq(md) {
+                margin: 0 20px;
+            }
+            @include mq(sm) {
+                padding: 10px 0 5px;
+            }
+
+            &:last-child {
+                border: none;
+            }
+
+            h4 {
+                font-family: $font2;
+                text-transform: uppercase;
+                font-size: 18px;
+                margin: 20px 0;
+                color: $bgBlock;
+                @include mq(md) {
+                    font-size: 17px;
+                }
+                @include mq(xs) {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .ads {
+            margin: 30px 0 20px;
+            position: relative;
+
+            img {
+                width: 100%;
+                position: relative;
+            }
+
+            p {
+                position: absolute;
+                top: 38%;
+                left: 25%;
+                color: $lightFont;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 24px;
+            }
+        }
+    }
+
+    .cycles {
+        margin: 30px auto;
+        position: relative;
+
+        &-img {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-text {
+            color: $lightFont;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 32px 47px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include mq(md) {
+                padding: 20px 25px;
+            }
+
+            h4 {
+                font-family: $font2;
+                font-size: 30px;
+                line-height: 35px;
+                text-transform: uppercase;
+                margin-bottom: 12px;
+                @include mq(md) {
+                    font-size: 25px;
+                    line-height: 30px;
+                }
+                @include mq(xs) {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+
+            p {
+                font-family: $font1;
+                font-size: 22px;
+                line-height: 28px;
+                font-weight: 300;
+                opacity: .8;
+                @include mq(md){
+                    font-size: 13px;
+                    line-height: 18px;
+                }
+                @include mq(xs) {
+                    font-size: 10px;
+                    line-height: 14px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.podcast {
+    margin-bottom: 30px;
+    h2 {
+        font-size: 55px;
+        font-family: $font2;
+        text-transform: uppercase;
+        line-height: 59px;
+        margin-bottom: 15px;
+        @include mq(md) {
+            font-size: 47px;
+            line-height: 51px;
+        }
+        @include mq(sm) {
+            font-size: 40px;
+            line-height: 44px;
+        }
+    }
+    &-tags {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        a{
+            font-size: 16px;
+        }
+    }
+    p {
+        font-size: 26px;
+        font-family: $font4;
+        margin-bottom: 20px;
+        @include mq(md) {
+            font-size: 22px;
+            line-height: 25px;
+        }
+        @include mq(sm) {
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+    &-img {
+        margin: 40px auto;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        audio {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 0 15px 20px;
+        }
+        &_copywriting {
+            line-height: 20px;
+            text-align: right;
+            font-family: $font4;
+            font-size: 12px;
+            color: #999;
+        }
+
+    }
+}

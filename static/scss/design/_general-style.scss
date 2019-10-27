@@ -1,0 +1,246 @@
+.dn {
+    display: none;
+}
+
+.adsBlock_horizontal {
+    height: 150px;
+    background-color: gray;
+    margin: 30px auto;
+    text-align: center;
+
+    h5 {
+        line-height: 150px;
+        color: $lightFont;
+        font-size: 75px;
+        font-family: $font2;
+        text-transform: uppercase;
+    }
+}
+
+.menu {
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+
+        li {
+            text-align: center;
+
+            a {
+                display: block;
+                height: 100%;
+                font-size: 18px;
+                text-transform: uppercase;
+                color: $lightFont;
+                font-family: $font2;
+                font-weight: 400;
+                letter-spacing: 0.9px;
+
+                @include mq(md) {
+                    font-size: 17px;
+                }
+
+                @include mq(sm) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include mq(sm) {
+        display: none;
+    }
+
+    a {
+        margin-top: -10px;
+
+        i {
+            color: $lightFont;
+            font-size: 25px;
+        }
+    }
+
+}
+
+.search-form {
+    margin-bottom: 20px;
+    display: none;
+
+    @include mq(sm) {
+        margin-bottom: 0;
+    }
+
+    .search-form_wrap {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .form-inline {
+            display: flex;
+            height: 35px;
+            width: 100%;
+
+            input {
+                flex-grow: 1;
+                font-family: $font2;
+                padding-left: 15px;
+                border-color: $bgBlock;
+                width: 100%;
+
+                &:hover,
+                &:active {
+                    border-color: $bgBlock;
+                }
+            }
+
+            button {
+                color: $lightFont;
+                border-color: $bgBlock;
+                background-color: $bgBlock;
+                font-family: $font2;
+                font-size: 20px;
+
+                &:hover,
+                &:active {
+                    transition-duration: .54s;
+                    color: $activeLink !important;
+                    border-color: $bgBlock !important;
+                    background: transparent !important;
+                }
+            }
+        }
+    }
+}
+
+.activeLink,
+.linkStyle {
+    &:hover {
+        color: $activeLink !important;
+        transition-duration: .54s;
+
+        h4,
+        h3,
+        span,
+        p {
+            color: $activeLink !important;
+            transition-duration: .54s;
+
+        }
+    }
+}
+
+.sp-bt {
+    justify-content: space-between;
+}
+
+.absolute-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+audio {
+    width: 100%;
+}
+
+.tag {
+    color: $bgBlock;
+    border: 2px solid #000;
+    padding: 3px 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 5px 10px 5px 0;
+
+    sup {
+        color: $activeLink;
+    }
+
+    &:hover {
+        background-color: $activeLink;
+        color: $lightFont;
+
+    }
+}
+
+.borderBottom {
+    border-bottom: 3px dotted #D3D3D3;
+}
+
+.linksBlock {
+    display: flex;
+    @include mq(xs) {
+        flex-direction: column-reverse;
+    }
+    a {
+        color: $bgBlock;
+        transition: all .1s !important;
+
+        &.link_prew {
+            font-family: $font2;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 30px;
+
+            i {
+                line-height: 10px;
+                display: inline-block;
+                transform: rotate(-130deg);
+            }
+        }
+    }
+    .socialNetworks {
+        @include mq(xs) {
+            margin-bottom: 25px;
+        }
+        a{
+            padding: 2px;
+            display: block;
+            border: 1px solid #000;
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            margin: 0 auto;
+            &:hover {
+                background: $activeLink;
+                color: $lightFont;
+                border: 1px solid $activeLink;
+            }
+        }
+    }
+}
+.add_material {
+    margin: 30px auto;
+    button {
+        text-transform: uppercase;
+        font-size: 21px;
+        background: transparent;
+        color: $activeLink;
+        border: 1px solid $activeLink;
+        width: 100%;
+        padding: 7px 15px;
+        @include mq(md) {
+            font-size: 18px;
+        }
+        @include mq(xs) {
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+
+        &:hover {
+            color: $lightFont;
+            background: $activeLink;
+        }
+    }
+}

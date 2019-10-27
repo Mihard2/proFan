@@ -1,0 +1,136 @@
+.actual-material {
+    padding-bottom: 50px;
+
+    .big-block {
+        position: relative;
+
+        &_bg {
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &_content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 30px;
+            color: $lightFont;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+
+            @include mq(md) {
+                padding: 20px;
+            }
+
+            @include mq(sm) {
+                padding: 15px;
+            }
+
+            h4 {
+                font-family: $font2;
+                font-size: 30px;
+                line-height: 35px;
+                text-transform: uppercase;
+                margin-bottom: 12px;
+
+                @include mq(md) {
+                    font-size: 25px;
+                    line-height: 30px;
+
+                }
+
+                @include mq(sm) {
+                    font-size: 21px;
+                }
+                @include mq(xs) {
+                    font-size: 15px;
+                    line-height: 19px;
+                }
+            }
+
+            p {
+                font-family: $font3;
+                font-size: 14px;
+                line-height: 21px;
+
+                @include mq(md) {
+                    font-size: 13px;
+                    line-height: 17px;
+                }
+                @include mq(xs) {
+                    font-size: 11px;
+                    line-height: 15px;
+                }
+            }
+        }
+    }
+
+    .small-blocks {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include mq(md) {
+            margin-top: 30px;
+            flex-direction: row;
+        }
+
+        @include mq(sm) {
+            justify-content: center;
+        }
+
+        .small-block {
+            position: relative;
+            max-height: 48%;
+
+            &_bg {
+                position: relative;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &_content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0 25px 15px;
+                color: $lightFont;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                height: 100%;
+                h4{
+                    font-size: 15px;
+                    font-family: $font2;
+                    text-transform: uppercase;
+                    @include mq(xs) {
+                        font-size: 13px;
+                    }
+                }
+                .public_date {
+                    font-size: 12px;
+                    font-family: $font1;
+                    span {
+                        font-size: 13px;
+                    }
+                    @include mq(xs) {
+                        font-size: 11px;
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                @include mq(md) {
+                    padding: 0 15px 10px;
+                }
+            }
+        }
+    }
+}
