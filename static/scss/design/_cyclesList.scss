@@ -1,0 +1,183 @@
+.cycle {
+    h2 {
+        font-size: 60px;
+        line-height: 65px;
+        font-family: $font2;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+
+        @include mq(md) {
+            font-size: 55px;
+            line-height: 60px;
+        }
+
+        @include mq(sm) {
+            font-size: 45px;
+            line-height: 49px;
+        }
+    }
+
+    .tags {
+        margin-bottom: 25px;
+
+        a {
+            font-size: 18px;
+
+            @include mq(md) {
+                font-size: 16px;
+            }
+
+            @include mq(sm) {
+                font-size: 15px;
+            }
+        }
+    }
+
+    p {
+        font-size: 26px;
+        font-family: $font4;
+        margin-bottom: 20px;
+
+        @include mq(md) {
+            font-size: 22px;
+        }
+
+        @include mq(sm) {
+            font-size: 19px;
+        }
+    }
+
+    img {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .materialsInCicle {
+        align-items: center;
+        margin-bottom: 40px;
+
+        @include mq(sm) {
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+
+        &_counter {
+            text-transform: uppercase;
+            font-family: $font2;
+            font-size: 33px;
+            color: $bgBlock;
+            line-height: 62px;
+
+            @include mq(md) {
+                font-size: 29px;
+                line-height: 56px;
+            }
+
+            @include mq(sm) {
+                font-size: 25px;
+                width: 100%;
+            }
+
+            .counter {
+                display: inline-block;
+                font-size: 45px;
+                background: $activeLink;
+                height: 68px;
+                width: 68px;
+                border-radius: 100%;
+                text-align: center;
+                color: $lightFont;
+
+                @include mq(md) {
+                    font-size: 40px;
+                    height: 63px;
+                    width: 63px;
+                }
+
+                @include mq(sm) {
+                    font-size: 33px;
+                    height: 57px;
+                    width: 57px;
+                }
+            }
+        }
+    }
+
+    .socialNetworks {
+        @include mq(sm) {
+            margin-bottom: 20px;
+        }
+
+        a {
+            height: 36px;
+            width: 36px;
+
+            i {
+                font-size: 20px;
+                padding-left: 1px;
+            }
+        }
+    }
+
+    .cycle-block {
+        &:last-child {
+            .leftBorder {
+                &_block {
+                    display: none;
+                }
+            }
+        }
+        .cycles {
+            .leftBorder {
+                @include mq(sm) {
+                    display: none;
+                }
+            }
+
+            &-img {
+                img {
+                    width: 100%;
+                }
+            }
+
+            &-desc {
+                flex-direction: column;
+
+                h4 {
+                    text-transform: uppercase;
+                    font-size: 22px;
+                    line-height: 28px;
+                    font-family: $font2;
+                    margin-bottom: 20px;
+
+                    @include mq(sm) {
+                        font-size: 19px;
+                        line-height: 25px;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $darkFont;
+
+                    @include mq(sm) {
+                        font-size: 15px;
+                        line-height: 18px;
+                    }
+                }
+
+                .tags {
+                    a {
+                        font-size: 12px;
+                        font-family: $font2;
+
+                        @include mq(sm) {
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
