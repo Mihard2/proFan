@@ -1886,6 +1886,126 @@ header .header .search-form .search-form_wrap .form-inline button:hover, header 
   }
 }
 
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts_img {
+  margin: 20px auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts_img img {
+  width: 100%;
+}
+
+.contacts_img-desc {
+  position: absolute;
+}
+
+.contacts_img-desc p {
+  font-size: 50px;
+  font-family: "OswaldBold", sans-serif;
+  color: #fff;
+}
+
+.contacts_img-desc p span {
+  color: #fb100a;
+}
+
+.contacts_description {
+  margin: 30px auto;
+}
+
+.contacts_description h4 {
+  font-size: 30px;
+  font-family: "OswaldBold", sans-serif;
+  line-height: 34px;
+  margin-bottom: 15px;
+}
+
+.contacts_description p {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #333333;
+}
+
+.contacts_form {
+  margin: 30px auto !important;
+}
+
+.contacts_form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 3px dotted #D3D3D3;
+  padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts_form form label {
+  font-family: "OswaldBold", sans-serif;
+  font-size: 19px;
+}
+
+.contacts_form form textarea {
+  border: 1px solid #000;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  padding: 4px;
+  height: 130px;
+  width: 100%;
+}
+
+.contacts_form form .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts_form form .information input {
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 4px 10px;
+  font-size: 16px;
+  line-height: 21px;
+  min-width: 250px;
+}
+
+.contacts_form form .information input.btnForm {
+  width: 150px;
+}
+
 footer {
   background: #000;
   min-height: 100px;
