@@ -46,11 +46,23 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Roboto Condensed light';
+    src: url('../fonts/RobotoCondensed-Light.eot');
+    src: url('../fonts/RobotoCondensed-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoCondensed-Light.woff2') format('woff2'),
+        url('../fonts/RobotoCondensed-Light.woff') format('woff'),
+        url('../fonts/RobotoCondensed-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
 
 $font1: 'Oswald', sans-serif;
 $font2: 'OswaldBold', sans-serif;
 $font3: 'Montserrat', sans-serif;
 $font4: 'Roboto Condensed', sans-serif;
+$font5: 'Roboto Condensed light', sans-serif;
 
 
 @font-face {
