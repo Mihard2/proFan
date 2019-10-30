@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="static/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="static/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="static/css/style.css">
-    <title>NBA list</title>
+    <title>NBA List</title>
 </head>
 
 <body>
@@ -24,21 +24,21 @@
                 <!-- /.col-lg-3 logo -->
                 <div class="col-lg-8 col-sm-10 header-menu">
                     <div class="menu">
-                        <ul class="row">
-                            <li class="col">
+                        <ul>
+                            <li>
                                 <a href="nbaList.html" class="activeLink">nba</a>
                             </li>
-                            <li class="col">
+                            <li>
                                 <a href="podcastList.html" class="activeLink">подкасты</a>
                             </li>
-                            <li class="col">
+                            <li>
                                 <a href="longridList.html" class="activeLink">лонгриды</a>
                             </li>
-                            <li class="col">
+                            <li>
                                 <a href="cyclesList.html" class="activeLink">циклы</a>
                             </li>
-                            <li class="col">
-                                <a href="javascript:void(0);" class="activeLink">контакты</a>
+                            <li>
+                                <a href="contacts.html" class="activeLink">контакты</a>
                             </li>
                         </ul>
                     </div>
@@ -122,8 +122,6 @@
     <div class="content">
         <div class="container">
 
-
-
             <!--------------------------------------------------------------------------------------------------------------------------------->
             <!--------------------------------------------------------------------------------------------------------------------------------->
             <!--------------------------------------------------------------------------------------------------------------------------------->
@@ -135,27 +133,80 @@
                     <div class="row">
                         <div class="col-lg-9">
                             <h2>nba</h2>
-                            <div class="popular-material_wrap activeLink">
-                                <a href="longridDetail.html">
-                                    <div class="popular-material_img">
-                                        <img src="static/img/podcasts_list/main_podcast.png" alt="">
-                                        <div class="popular-material_text absolute-block">
-                                            <h4>название самого нового и продвигаемого
-                                                материала в рубрике</h4>
-                                            <audio src="static/audio/Billie Eilish - Bad Guy.mp3" controls></audio>
-                                        </div>
-                                        <!-- /.popular-material_text -->
+                            <div class="bigBlock">
+                                <img src="static/img/podcasts_list/main_podcast.png" alt="">
+                                <!-- /.cycles-img -->
+                                <a href="longridList.html" class="wrap_desc activeLink">
+                                    <h4>название статьи из цикла, редкого, но подробного
+                                        аналитического материала большого размера с журнальной
+                                        версткой информации</h4>
+                                    <div class="shortDecs">Идеи гедонизма занимают центральное место в утилитаризме
+                                        Милля и Бентама, однако реальность понимает под собой структурализм.
+                                        По своим философским взглядам
+                                        Дезами был материалистом и атеистом, последователем Гельвеция, однако вещь в
+                                        себе
+                                        категорически порождает и обеспечивает знак.
                                     </div>
-                                    <!-- /.popular-material_img -->
+                                    <div class="datePublic">
+                                        <span>
+                                            <i class="icon-stopwatch"></i>
+                                        </span> 26.09.19
+                                    </div>
                                 </a>
+                                <!-- /.cycles-text -->
                             </div>
-                            <!-- /.popular-material_wrap -->
+                            <!-- /.col-md-12 bigBlock -->
                         </div>
                         <!-- /.col-lg-9 -->
                         <div class="col-lg-3">
                             <div class="popular-material_tags">
                                 <span class="popular-material_tags-title">темы</span>
-                                <div class="popular-material_tags-block">
+                                <form id="themsNba" class="thems" action="#">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <span class="checkbox_text">тег-тема для лонгридов
+                                            <sup>13</sup>
+                                            <span class="close">x</span>
+                                        </span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <span class="checkbox_text">вторая тема
+                                            <sup>21</sup>
+                                            <span class="close">x</span>
+                                        </span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <span class="checkbox_text">третий тег
+                                            <sup>1</sup>
+                                            <span class="close">x</span>
+                                        </span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <span class="checkbox_text">еще какой-то тег из пяти слов для лонгридов 
+                                            <sup>20</sup>
+                                            <span class="close">x</span>
+                                        </span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <span class="checkbox_text">вторая тема
+                                            <sup>21</sup>
+                                            <span class="close">x</span>
+                                        </span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <span class="checkbox_text">третий тег
+                                            <sup>1</sup>
+                                            <span class="close">x</span>
+                                        </span>
+                                    </label>
+                                </form>
+
+                                <!-- <div class="popular-material_tags-block">
                                     <a class="tag" href="javascript:voide(0)">тег-тема NBA <sup>13</sup> </a>
                                     <a class="tag" href="javascript:voide(0)">вторая тема <sup>13</sup> </a>
                                     <a class="tag" href="javascript:voide(0)">третий тег <sup>13</sup> </a>
@@ -167,8 +218,8 @@
                                     <a class="tag" href="javascript:voide(0)">спортивная аналитика <sup>13</sup> </a>
                                     <a class="tag" href="javascript:voide(0)">еще одна тема или тег <sup>13</sup> </a>
 
-                                </div>
-                                <!-- /.popular-material_tags-block -->
+                                </div> -->
+
                             </div>
                             <!-- /.popular-material_tags -->
                         </div>
@@ -325,19 +376,20 @@
             <!--------------------------------------------------------------------------------------------------------------------------------->
             <!--------------------------------------------------------------------------------------------------------------------------------->
             <!--------------------------------------------------------------------------------------------------------------------------------->
-
-
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="adsBlock_horizontal">
-                        <!-- <h5> рекламный блок </h5> -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="adsBlock_horizontal">
+                            <!-- <h5> рекламный блок </h5> -->
+                        </div>
+                        <!-- /.col-lg-12 adsBlock_horizontal -->
                     </div>
-                    <!-- /.col-lg-12 adsBlock_horizontal -->
                 </div>
             </div>
         </div>
-        <!-- /.container -->
+        <!-- /.row main-content -->
+    </div>
+    <!-- /.container -->
     </div>
     <!-- /.content -->
     <footer>
@@ -353,24 +405,19 @@
                     <div class="menu">
                         <ul>
                             <li>
-                                <a href="javascript:void(0);" target="" rel="noopener noreferrer"
-                                    class="activeLink">nba</a>
+                                <a href="nbaList.html" class="activeLink">nba</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);" target="" rel="noopener noreferrer"
-                                    class="activeLink">подкасты</a>
+                                <a href="podcastList.html" class="activeLink">подкасты</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);" target="" rel="noopener noreferrer"
-                                    class="activeLink">лонгриды</a>
+                                <a href="longridList.html" class="activeLink">лонгриды</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);" target="" rel="noopener noreferrer"
-                                    class="activeLink">циклы</a>
+                                <a href="cyclesList.html" class="activeLink">циклы</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);" target="" rel="noopener noreferrer"
-                                    class="activeLink">контакты</a>
+                                <a href="contacts.html" class="activeLink">контакты</a>
                             </li>
                         </ul>
                     </div>

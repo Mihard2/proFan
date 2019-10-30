@@ -24,20 +24,20 @@
                 <!-- /.col-lg-3 logo -->
                 <div class="col-lg-8 col-sm-10 header-menu">
                     <div class="menu">
-                        <ul class="row">
-                            <li class="col">
+                        <ul>
+                            <li>
                                 <a href="nbaList.html" class="activeLink">nba</a>
                             </li>
-                            <li class="col">
+                            <li>
                                 <a href="podcastList.html" class="activeLink">подкасты</a>
                             </li>
-                            <li class="col">
+                            <li>
                                 <a href="longridList.html" class="activeLink">лонгриды</a>
                             </li>
-                            <li class="col">
+                            <li>
                                 <a href="cyclesList.html" class="activeLink">циклы</a>
                             </li>
-                            <li class="col">
+                            <li>
                                 <a href="contacts.html" class="activeLink">контакты</a>
                             </li>
                         </ul>
@@ -357,7 +357,16 @@
                                     в несколько строк, например, даже в три строки
                                 </h4>
                             </a>
-                            <audio src="static/audio/Billie Eilish - Bad Guy.mp3" controls></audio>
+
+                            <div id="player"> 
+                                    <audio id="audio" src="static/audio/Billie Eilish - Bad Guy.mp3" loop>
+                                    </audio>  
+                                    <div id="volume"></div><br>
+                                    <div id="progressbar"></div><br> 
+                                    <div id="playpause"></div>
+                                  </div>
+
+                            <!-- <audio src="static/audio/Billie Eilish - Bad Guy.mp3" controls></audio> -->
                             <!--  /.audio-block -->
                         </div>
                          <div class="audio-block">
@@ -405,7 +414,7 @@
                 </div>
                 <!-- /.col-lg-4 audio -->
                 <div class="col-12">
-                    <div class="cycleBlock">
+                    <div class="bigBlock">
                         <img src="static/img/cycles.png" alt="">
                         <!-- /.cycles-img -->
                         <a href="longridList.html" class="wrap_desc activeLink">
@@ -426,7 +435,7 @@
                         </a>
                         <!-- /.cycles-text -->
                     </div>
-                    <!-- /.col-md-12 cycles -->
+                    <!-- /.col-md-12 bigBlock -->
                 </div>
 
                 <div class="col-12 popular">
@@ -537,24 +546,19 @@
                     <div class="menu">
                         <ul>
                             <li>
-                                <a href="javascript:void(0);" target="" rel="noopener noreferrer"
-                                    class="activeLink">nba</a>
+                                <a href="nbaList.html" class="activeLink">nba</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);" target="" rel="noopener noreferrer"
-                                    class="activeLink">подкасты</a>
+                                <a href="podcastList.html" class="activeLink">подкасты</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);" target="" rel="noopener noreferrer"
-                                    class="activeLink">лонгриды</a>
+                                <a href="longridList.html" class="activeLink">лонгриды</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);" target="" rel="noopener noreferrer"
-                                    class="activeLink">циклы</a>
+                                <a href="cyclesList.html" class="activeLink">циклы</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);" target="" rel="noopener noreferrer"
-                                    class="activeLink">контакты</a>
+                                <a href="contacts.html" class="activeLink">контакты</a>
                             </li>
                         </ul>
                     </div>
@@ -596,8 +600,54 @@
         <!-- /.container footer -->
     </footer>
     <!-- /.footer -->
-    <script src="static/js/jQuery3.4.1.min.js"></script>
+    <!-- <script src="static/js/jQuery3.4.1.min.js"></script> -->
+    <!-- <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
     <script src="static/js/main.js"></script>
+    <script>
+            $(function() {
+
+                var $aud = $("#audio"),
+                    $pp  = $('#playpause'),
+                    $vol = $('#volume'),
+                    $bar = $("#progressbar"),
+                    AUDIO= $aud[0];
+                
+                AUDIO.volume = 0.75;
+                AUDIO.addEventListener("timeupdate", progress, false);
+                
+                function getTime(t) {
+                  var m=~~(t/60), s=~~(t % 60);
+                  return (m<10?"0"+m:m)+':'+(s<10?"0"+s:s);
+                }
+                
+                function progress() {
+                  $bar.slider('value', ~~(100/AUDIO.duration*AUDIO.currentTime));
+                  $pp.text(getTime(AUDIO.currentTime));
+                }
+              
+                $vol.slider( {
+                  value : AUDIO.volume*100,
+                  slide : function(ev, ui) {
+                    $vol.css({background:"hsla(180,"+ui.value+"%,50%,1)"});
+                    AUDIO.volume = ui.value/100; 
+                  } 
+                });
+                 
+                $bar.slider( {
+                  value : AUDIO.currentTime,
+                  slide : function(ev, ui) {
+                    AUDIO.currentTime = AUDIO.duration/100*ui.value;
+                  }
+                });
+                
+                $pp.click(function() {
+                  return AUDIO[AUDIO.paused?'play':'pause']();
+                });
+                
+              });
+    </script>
 </body>
 
 </html>

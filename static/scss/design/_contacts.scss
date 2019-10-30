@@ -52,7 +52,8 @@
         form {
             display: flex;
             flex-direction: column;
-            border: 3px dotted #D3D3D3;
+            border-left: 3px dotted #D3D3D3;
+            border-top: 3px dotted #D3D3D3;
             padding: 20px;
             justify-content: center;
             align-items: center;
@@ -69,22 +70,30 @@
                 padding: 4px;
                 height: 130px;
                 width: 100%;
+                margin-bottom: 15px;
+                &:active {
+                    background: $activeLink;
+                }
             }
 
             .information {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 input {
-                    margin-bottom: 10px;
+                    margin-bottom: 13px;
                     border: 1px solid $bgBlock;
                     font-family: $font4;
                     padding: 4px 10px;
                     font-size: 16px;
                     line-height: 21px;
                     min-width: 250px;
-
-                    &.btnForm {
-                        width: 150px;
+                }
+                button {
+                    width: 150px;
+                    &:hover {
+                        background: $activeLink;
+                        color: $lightFont;
                     }
                 }
             }

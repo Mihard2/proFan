@@ -1,0 +1,65 @@
+.thems {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+    @include mq(md) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    label {
+        border: 2px solid $bgBlock;
+        margin: 5px 10px 5px 0;
+
+        .checkbox_text {
+            padding: 4px 10px;
+            font-size: 16px;
+            font-family: $font4;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: block;
+            position: relative;
+
+            sup {
+                color: $activeLink;
+            }
+
+            .close {
+                display: none;
+                font-size: 11px;
+                color: $lightFont;
+                font-family: $font5;
+                position: absolute;
+                right: 8px;
+                top: 25%;
+            }
+        }
+
+        input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+
+            &:hover+.checkbox_text {
+                background: $activeLink;
+                color: $lightFont;
+
+                .close {
+                    display: inline-block;
+                }
+            }
+
+            &:checked+.checkbox_text {
+                background: $activeLink;
+                color: $lightFont;
+
+                .close {
+                    display: inline-block;
+                }
+            }
+
+        }
+    }
+}

@@ -302,3 +302,70 @@ audio {
         margin-bottom: 15px;
     }
 }
+.bigBlock {
+    position: relative;
+    width: 100%;
+    img {
+        width: 100%;
+    }
+    .wrap_desc {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 35px;
+        color: $lightFont;
+        @include mq(md) {
+            padding: 20px;
+        }
+        @include mq(xs) {
+            padding: 10px;
+        }
+
+        h4 {
+            font-family: $font2;
+            font-size: 34px;
+            line-height: 39px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            @include mq(lg) {
+                font-size: 28px;
+                line-height: 32px;
+            }
+
+            @include mq(md) {
+                font-size: 23px;
+                line-height: 27px;
+                margin-bottom: 7px;
+            }
+
+            @include mq(xs) {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+        .shortDecs {
+            font-family: $font5;
+            font-size: 22px;
+            line-height: 27px;
+            margin-bottom: 10px;
+            @include mq(lg) {
+                font-size: 18px;
+                line-height: 22px;
+            }
+            @include mq(md) {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 5px;
+            }
+            @include mq(sm) {
+                display: none;
+            }
+        }
+        .datePublic {
+            font-size: 13px;
+            @include mq(md) {
+                font-size: 11px;
+            }
+        }
+    }
+}
