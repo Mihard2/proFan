@@ -52,9 +52,7 @@
         form {
             display: flex;
             flex-direction: column;
-            border-left: 3px dotted #D3D3D3;
-            border-top: 3px dotted #D3D3D3;
-            padding: 20px;
+            padding: 20px 0;
             justify-content: center;
             align-items: center;
 
@@ -71,8 +69,8 @@
                 height: 130px;
                 width: 100%;
                 margin-bottom: 15px;
-                &:active {
-                    background: $activeLink;
+                &:focus {
+                    border: $activeLink;
                 }
             }
 
